@@ -58,27 +58,9 @@ def run_all_experiments_save(device):
     #   Try with different CNN configuraitons, default is 256 sequence lenth with customer softmax
 
     run_save_results (config, device, all_experiment_results)
-
    
-    config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.01
-    run_save_results (config, device, all_experiment_results)
 
-    config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.001
-    run_save_results (config, device, all_experiment_results)
-
-    config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.05
-    run_save_results (config, device, all_experiment_results)
-    
-    config.modelconfig.ACT_FUNCTION = "softmax"
-    run_save_results (config, device, all_experiment_results)
-    
-# #    Try with different filter size
-    config.modelconfig.KERNEL_1 = 8
-    config.modelconfig.KERNEL_2 = 12
-    config.modelconfig.KERNEL_3 = 16
-    run_save_results (config, device, all_experiment_results)
-
-    config.hyperparams.LOSS_FN_CLASS_WEIGHTS = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0,1.0 ]
+    config.programsettings.MODEL_NAME = "BioBERT_fc"
     run_save_results (config, device, all_experiment_results)
     
                                                 
@@ -90,6 +72,26 @@ def run_all_experiments_save(device):
         
 
 # All previous runs
+#     config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.01
+#     run_save_results (config, device, all_experiment_results)
+
+#     config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.001
+#     run_save_results (config, device, all_experiment_results)
+
+#     config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.05
+#     run_save_results (config, device, all_experiment_results)
+    
+#     config.modelconfig.ACT_FUNCTION = "softmax"
+#     run_save_results (config, device, all_experiment_results)
+    
+# # #    Try with different filter size
+#     config.modelconfig.KERNEL_1 = 8
+#     config.modelconfig.KERNEL_2 = 12
+#     config.modelconfig.KERNEL_3 = 16
+#     run_save_results (config, device, all_experiment_results)
+
+#     config.hyperparams.LOSS_FN_CLASS_WEIGHTS = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0,1.0 ]
+#     run_save_results (config, device, all_experiment_results)
 
 #After softmax fix
 #     config.hyperparams.MAX_SEQ_LENGTH = 256
