@@ -61,7 +61,7 @@ This is for Berkeley's MIDS program - course w266(NLP and deep learning)  final 
 
         }
       3. create folder data_divided in main folder and download n2c2 dataset.
-      4. use data_prep_bert.ipynb for preparing data for BERT
+      4. use i2b2_prep_BERT.ipynb for preparing data for BERT
       5. Run below scripts in iPython or Jupyter notebook
          from experiment import run_model
          run_model
