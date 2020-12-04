@@ -59,26 +59,29 @@ def run_all_experiments_save(device):
 
     run_save_results (config, device, all_experiment_results)
 
-#     #   Try with shorter sequence length
-#     config.hyperparams.MAX_SEQ_LENGTH = 128
-#     config.modelconfig.MAX_SEQ_LENGTH = 128
-#     run_save_results (config, device, all_experiment_results)
+   
+    config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.01
+    run_save_results (config, device, all_experiment_results)
 
+    config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.001
+    run_save_results (config, device, all_experiment_results)
 
-#     #    Try with regular softmax, set back to 256 seq length
-#     config.hyperparams.MAX_SEQ_LENGTH = 256
-#     config.modelconfig.MAX_SEQ_LENGTH = 256
-#     config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.01
-#     run_save_results (config, device, all_experiment_results)
+    config.modelconfig.CUST_SFTMX_CLASS_BETA = 0.05
+    run_save_results (config, device, all_experiment_results)
     
-    
-#     config.modelconfig.ACT_FUNCTION = "softmax"
-#     run_save_results (config, device, all_experiment_results)
+    config.modelconfig.ACT_FUNCTION = "softmax"
+    run_save_results (config, device, all_experiment_results)
     
 # #    Try with different filter size
-#     config.modelconfig.KERNEL_SIZES = [8,10,16]
-#     run_save_results (config, device, all_experiment_results)
+    config.modelconfig.KERNEL_1 = 8
+    config.modelconfig.KERNEL_2 = 12
+    config.modelconfig.KERNEL_3 = 16
+    run_save_results (config, device, all_experiment_results)
+
+    config.hyperparams.LOSS_FN_CLASS_WEIGHTS = [1.0,1.0,1.0,1.0,1.0,1.0,1.0,12.0,1.0 ]
+    run_save_results (config, device, all_experiment_results)
     
+                                                
     all_model_results_pickle_file = config.programsettings.REPORTS_DIR + "multi_model_experiment_results_" + str(datetime.now()).replace(":", "_").replace(".", "_") + ".pkl"
     with open(all_model_results_pickle_file, "wb") as f:
         pickle.dump(all_experiment_results, f)      
