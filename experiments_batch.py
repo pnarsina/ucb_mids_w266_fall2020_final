@@ -13,7 +13,7 @@ from util.tools import load_config, configEncoder
 def save_missed_cases_to_file(config, file_start_name, dev_preds, dev_label_ids, train_inputs):
     tokenizer = BertTokenizer.from_pretrained('bert-base-cased', do_lower_case=False)
     missed_cases = []
-    for i in range(0,50):
+    for i in range(0,len(dev_preds)):
         if dev_label_ids[i] !=  dev_preds[i]:
              missed_cases.append([ dev_preds[i],  dev_label_ids[i] , " ". join (tokenizer.convert_ids_to_tokens(train_inputs[i])) ])
 
