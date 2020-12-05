@@ -1,10 +1,11 @@
 # w266_final
 This is for Berkeley's MIDS program - course w266(NLP and deep learning)  final project on NER and Relation extraction
 
-#### Authors: Valerie Meausoone and Prabhaker Narsina
+#### Authors: Valerie Meausoone and Prabhu Narsina
 
 #### Objective: Find relationship between given entities. Our focus on this project is been on i2b2/n2c2 dataset, 
-#### however we have tested our model with TACRED dataset also.
+#### and focussed especially on ADE to drug relationship. However we have tested our model with TACRED dataset also and performed 
+#### to past studies with very little effort of tuning.
 #### Pre-requisites for the project
         1. Python 3.6 (or higher)
         2. Pytorch 1.7 (or higher)
