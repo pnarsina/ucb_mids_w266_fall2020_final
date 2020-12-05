@@ -4,7 +4,7 @@ This is for Berkeley's MIDS program - course w266(NLP and deep learning)  final 
 #### Authors: Valerie Meausoone and Prabhu Narsina
 
 #### Objective: Find relationship between given entities. Our focus on this project is been on i2b2/n2c2 dataset, 
-#### and focussing especially on ADE to drug relationship. However we have tested our model with TACRED dataset also and performed 
+#### and focussed especially on ADE to drug relationship. However we have tested our model with TACRED dataset also and performed 
 #### to past studies with very little effort of tuning.
 #### Pre-requisites for the project
         1. Python 3.6 (or higher)
